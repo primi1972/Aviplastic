@@ -1,0 +1,63 @@
+---
+---
+
+<div class="navbar-fixed">
+<nav class="navbar">
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo mt-2 ml-4"><img src="/logo.svg" width="70px"/></a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="Nosotros">Nosotros</a></li>
+        <li><a href="Productos">Productos</a></li>
+        <li><a href="Servicios">Servicios</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+        <li><a href="Nosotros">Nosotros</a></li>
+        <li><a href="Productos">Productos</a></li>
+        <li><a href="Servicios">Servicios</a></li>
+  </ul>
+</div>
+
+<style>
+  .mostrar{
+    height: 250px;
+    transform: translateX(0);
+  }
+
+  .navbar{
+    background: transparent;
+    transition: 500ms ease-in-out;
+  }
+
+</style>
+
+<script>
+  // Encuentra todos los botones con la clase `alert` en la página.
+
+  const button = document.querySelector('.sidenav-trigger');
+
+  // Maneja los clics en cada botón.
+    button.addEventListener('click', () => {
+      // alert('Click');
+      var element = document.getElementById('mobile-demo');
+      element.classList.toggle('mostrar');
+    });
+
+    var scrollPos = 30;
+window.addEventListener("scroll", function () {
+  var menu = document.querySelector(".navbar");
+
+  if (window.pageYOffset > scrollPos) {
+    menu.classList.add("blue");
+    menu.classList.remove("transicion");
+  } else {
+    menu.classList.remove("blue");
+    menu.classList.add("transicion");
+  }
+  scrollPos = window.pageYOffset;
+});
+
+</script>

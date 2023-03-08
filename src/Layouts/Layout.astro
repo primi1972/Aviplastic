@@ -1,0 +1,56 @@
+---
+import Navbar from '../Components/NavBar.astro';
+import Footer from '../Components/Footer.astro';
+import "@fontsource/roboto/300.css";
+import "@fontsource/roboto/400.css";
+import "@fontsource/roboto/500.css";
+import "@fontsource/roboto/700.css";
+
+export interface Props {
+  title: string;
+}
+const { title } = Astro.props;
+
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Aviplastic - {title}</title>
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
+  </head>
+  <body>
+    <Navbar/>
+    <slot />
+    <Footer/>
+  </body>
+</html>
+
+<style is:global>
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+  }
+
+  html {
+  scroll-behavior: smooth;
+}
+</style>
