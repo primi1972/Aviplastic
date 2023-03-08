@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import { ThemeProvider } from "@emotion/react";
 import {
   Box,
@@ -33,7 +32,7 @@ const bull = (
 );
 
 const card = (
-  <Fragment>    
+  <>    
     <CardMedia
         sx={{ height: 140 }}
         image="https://imgs.search.brave.com/uWH8o3pw24ELeSfLLhoYXO_4gYv-NV6xk_znlrX6CJ4/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJ0YWcuY29t/L3dhbGxwYXBlci9m/dWxsL2MvOS82Lzgx/MTc3My1nb3JnZXJv/dXMtbmFydXRvLXNo/aXBwdWRlbi13YWxs/cGFwZXItZm9yLWRl/c2t0b3AtMjU2MHgx/NDQwLmpwZw"
@@ -57,7 +56,7 @@ const card = (
       <Button size="small" variant="outlined">Leer Mas...</Button>
       <Button size="small" variant="outlined">Que mas...</Button>
     </CardActions>
-  </Fragment>
+  </>
 );
 
 export default function Home() {

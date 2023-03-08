@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Fragment } from "react";
 
 const CardGeneral = ({ color, imagen, titulo, texto }) => {
   return (
