@@ -20,6 +20,7 @@
     "@mui/styled-engine-sc": "^5.11.11",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
+    "animate.css": "^4.1.1",
     "astro": "^2.0.18",
     "framer-motion": "^10.2.3",
     "materialize-css": "^1.0.0-rc.2",
