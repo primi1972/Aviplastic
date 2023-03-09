@@ -1,8 +1,9 @@
 ---
+import 'animate.css';
 const {imagen, texto = "texto", producto = 'Costal'} = Astro.props;
 ---
 
-<div class="card">
+<div class="card animate__animated animate__fadeInRight">
   <div class="card-image relative">
     <img src={imagen} />
     <div class="absolute top-2 left-2 opacity-30">
