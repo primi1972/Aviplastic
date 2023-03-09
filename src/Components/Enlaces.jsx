@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const CardGeneral = ({ color, imagen, titulo, texto }) => {
+const CardGeneral = ({ color, imagen, titulo, texto, enlace }) => {
   return (
     <>
     <motion.div
@@ -20,7 +20,7 @@ const CardGeneral = ({ color, imagen, titulo, texto }) => {
       </svg>
       <h3 className="text-3xl font-bold">{titulo}</h3>
       <p className="text-xl font-extralight">{texto}</p>
-      <a href="#" className="waves-effect waves-light btn mx-auto mt-4">Saber mas...</a>       
+      <a href={enlace} className="waves-effect waves-light btn mx-auto mt-4">Saber mas...</a>       
     </motion.div>
     </>
   );
