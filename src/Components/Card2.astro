@@ -1,44 +1,35 @@
 ---
-const { titulo = "Titulo", imagen, texto = "texto", link = "#" } = Astro.props;
+const {imagen, texto = "texto", producto = 'Costal'} = Astro.props;
 ---
 
 <div class="card">
-  <div class="card-image">
+  <div class="card-image relative">
     <img src={imagen} />
-    <span class="card-title">{titulo}</span>
+    <div class="absolute top-2 left-2 opacity-30">
+      <img src="/logo.svg" alt="">  
+    </div>
   </div>
   <div class="card-content">
-    <p>{texto}</p>
+    <p class="text-center">{texto}</p>
     <table class="striped centered responsive-table">
-      <thead >
+      <thead class="text-xl">
         <tr>
-            <th>Name</th>
-            <th>Item Name</th>
-            <th>Item Price</th>
+            <th>{producto}</th>
         </tr>
       </thead>
 
-      <tbody>
+      <tbody class="tracking-widest">
         <tr>
-          <td>Alvin</td>
-          <td>Eclair</td>
-          <td>$0.87</td>
+          <td>30x50</td> 
         </tr>
         <tr>
-          <td>Alan</td>
-          <td>Jellybean</td>
-          <td>$3.76</td>
+          <td>70x80</td>  
         </tr>
         <tr>
-          <td>Jonathan</td>
-          <td>Lollipop</td>
-          <td>$7.00</td>
+          <td>70x90</td>   
         </tr>
       </tbody>
     </table>
-  </div>
-  <div class="card-action">
-    <a href={link}>This is a link</a>
   </div>
 </div>
 
