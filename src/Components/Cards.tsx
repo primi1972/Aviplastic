@@ -4,7 +4,6 @@ import {
   Button,
   Container,
   CssBaseline,
-  TextField,
   Typography,
   Card,
   CardActions,
@@ -22,19 +21,10 @@ const theme = createTheme({
   },
 });
 
-const bull = (
-  <Box
-    component="span"
-    sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
-  >
-    •
-  </Box>
-);
-
 const card = (
   <>    
     <CardMedia
-        sx={{ height: 140 }}
+        sx={{ height: 200, width: 300 }}
         image="https://imgs.search.brave.com/uWH8o3pw24ELeSfLLhoYXO_4gYv-NV6xk_znlrX6CJ4/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJ0YWcuY29t/L3dhbGxwYXBlci9m/dWxsL2MvOS82Lzgx/MTc3My1nb3JnZXJv/dXMtbmFydXRvLXNo/aXBwdWRlbi13YWxs/cGFwZXItZm9yLWRl/c2t0b3AtMjU2MHgx/NDQwLmpwZw"
         title="Naruto Shippuden"
       />
@@ -74,7 +64,7 @@ export default function Home() {
       <Container maxWidth="lg" sx={{ my: 5 }}>
         <Box
           component="form"
-          sx={{ display: "flex", flexDirection: "row", gap: 2 }}
+          sx={{ display: "flex", flexDirection: "row", gap: 2, justifyContent: "center"}}
           onSubmit={handleTodo}
         >
           <Card variant="outlined">{card}</Card>
