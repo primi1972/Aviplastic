@@ -20,7 +20,7 @@ const CardGeneral = ({ color, imagen, titulo, texto, enlace }) => {
       </svg>
       <h3 className="text-3xl font-bold">{titulo}</h3>
       <p className="text-xl font-extralight">{texto}</p>
-      <a href={enlace} className="waves-effect waves-light btn mx-auto mt-4">Saber mas...</a>       
+      <a href={enlace} className="waves-effect waves-light btn mx-auto mt-4 bg-blue-400">Saber mas...</a>       
     </motion.div>
     </>
   );
