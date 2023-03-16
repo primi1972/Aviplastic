@@ -6,7 +6,7 @@
         <video muted autoplay loop src="/01.mp4" class="slider_img"></video>
       </div>
       <div class="slider_texto m-3">
-        <h2>Tutulo</h2>
+        <h2>Titulo 01</h2>
         <h3 class="my-2">Subtitulo</h3>
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis
@@ -20,9 +20,9 @@
       <div class="slider__picture">
         <video muted autoplay loop src="/01.mp4" class="slider_img"></video>
       </div>
-      <div class="slider_texto">
-        <h2>Tutulo</h2>
-        <h3>Subtitulo</h3>
+      <div class="slider_texto m-3">
+        <h2>Titulo 02</h2>
+        <h3 class="my-2">Subtitulo</h3>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi autem
           architecto quae ab. Aliquid delectus distinctio blanditiis, similique
@@ -35,9 +35,9 @@
       <div class="slider__picture">
         <video muted autoplay loop src="/01.mp4" class="slider_img"></video>
       </div>
-      <div class="slider_texto">
-        <h2>Tutulo</h2>
-        <h3>Subtitulo</h3>
+      <div class="slider_texto m-3">
+        <h2>Titulo 03</h2>
+        <h3 class="my-2">Subtitulo</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque nihil
           soluta praesentium ipsum dolore optio!
@@ -102,3 +102,27 @@
   }
 
 </style>
+
+<script>
+    const sliders=[...document.querySelectorAll('.slider__body')];
+    const arrowLeft = document.querySelector('.fa-arrow-left');
+    const arrowRight = document.querySelector('.fa-arrow-right');
+    let value;
+
+    arrowRight.addEventListener('click', ()=> changePosition(1));
+    arrowLeft.addEventListener('click', ()=> changePosition(-1));
+
+    function changePosition(change){
+        const currentElement = Number(document.querySelector('.slider__body__show').dataset.id);
+        value = currentElement;
+        value += change;
+        
+        if(value === 0 || value == sliders.length + 1){
+            value = value === 0 ? sliders.length : 1;
+        }
+        sliders[currentElement - 1].classList.toggle('slider__body__show');
+        sliders[value - 1].classList.toggle('slider__body__show');
+
+    };
+
+</script>
