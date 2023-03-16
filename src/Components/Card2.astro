@@ -3,7 +3,7 @@ import 'animate.css';
 const {imagen, texto = "texto", producto = 'Costal'} = Astro.props;
 ---
 
-<div class="card animate__animated animate__bounceIn">
+<div class="w-[300px] animate__animated animate__bounceIn">
   <div class="card-image relative">
     <img src={imagen} />
     <div class="absolute top-2 left-2 opacity-30">
@@ -35,7 +35,5 @@ const {imagen, texto = "texto", producto = 'Costal'} = Astro.props;
 </div>
 
 <style>
-  .card {
-    width: 300px;
-  }
+
 </style>

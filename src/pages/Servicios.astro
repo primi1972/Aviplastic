@@ -1,15 +1,11 @@
 ---
 import Layout from "../Layouts/Layout.astro";
-import Card from "../Components/Cards";
+import Slider from "../Components/Slider.astro";
 ---
 
 <Layout title="Servicios">
   <h1 class="titulo">Servicios</h1>
-  <div class="grupo w-auto">
-    <Card client:only="react" />
-    <Card client:only="react" />
-    <Card client:only="react" />
-    <Card client:only="react" />
-    <Card client:only="react" />
+  <div class="grupo my-10">
+    <Slider/>
   </div>
 </Layout>

@@ -1,0 +1,102 @@
+<main class="slider">
+  <div class="slider__container container">
+    <i class="fa-solid fa-arrow-left fa-2xl"></i>
+    <div class="slider__body slider__body__show shadow" data-id="1">
+      <div class="slider__picture">
+        <video muted autoplay loop src="/01.mp4" class="slider_img"></video>
+      </div>
+      <div class="slider_texto m-3">
+        <h2>Tutulo</h2>
+        <h3 class="my-2">Subtitulo</h3>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis
+          animi nisi, ipsa explicabo veniam repudiandae odit. Corrupti adipisci
+          rerum repudiandae.
+        </p>
+      </div>
+    </div>
+
+    <div class="slider__body" data-id="2">
+      <div class="slider__picture">
+        <video muted autoplay loop src="/01.mp4" class="slider_img"></video>
+      </div>
+      <div class="slider_texto">
+        <h2>Tutulo</h2>
+        <h3>Subtitulo</h3>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi autem
+          architecto quae ab. Aliquid delectus distinctio blanditiis, similique
+          aliquam illo corrupti sapiente.
+        </p>
+      </div>
+    </div>
+
+    <div class="slider__body" data-id="3">
+      <div class="slider__picture">
+        <video muted autoplay loop src="/01.mp4" class="slider_img"></video>
+      </div>
+      <div class="slider_texto">
+        <h2>Tutulo</h2>
+        <h3>Subtitulo</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque nihil
+          soluta praesentium ipsum dolore optio!
+        </p>
+      </div>
+    </div>
+
+    <i class="fa-solid fa-arrow-right fa-2xl"></i>
+  </div>
+</main>
+
+<style>
+  .container {
+    width: 450px;
+    overflow: hidden;
+  }
+
+  .slider {
+    position: relative;
+    margin: 0 auto;
+    height: auto;
+  }
+
+  .slider__container {
+    background-color: #f2f2f2;
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    align-items: center;
+    gap: 1em;
+  }
+
+  .slider__body {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    opacity: 0;
+    pointer-events: none;
+    display: grid;
+    background-color: #f2f2f2;
+    grid-template-rows: max-content 1fr ;
+    align-items: center;
+    transition: 1.5s;
+  }
+
+  .slider__body__show {
+    opacity: 1;
+    pointer-events: unset;
+  }
+  .slider_img {
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .fa-solid{
+    cursor: pointer;
+    width: 90%;
+  }
+
+</style>
