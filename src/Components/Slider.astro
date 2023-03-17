@@ -1,25 +1,32 @@
 ---
-import Card from '../Components/CardSlider.astro';
+import CardVideo from '../Components/CardSliderVideo.astro';
+import CardFoto from '../Components/CardSliderFoto.astro';
 ---
 
 <main class="slider">
   <div class="slider__container container">
+
     <div class="flecha flex items-center">
       <i class="fa-solid fa-arrow-left fa-2xl"></i>
     </div>
 
     
     <div class="slider__body slider__body__show shadow border-2" data-id="1">
-      <Card titulo="Titulo 01" imagen="portada.mkv" texto="Lorem, ipsum dolor sit amet Lorem, ipsum dolor sit amet Lorem, ipsum dolor sit amet"/>
+      <CardVideo titulo="Titulo 01" video="portada.mkv" texto="Lorem, ipsum dolor sit amet Lorem, ipsum dolor sit amet Lorem, ipsum dolor sit amet"/>
     </div>
 
     <div class="slider__body shadow border-2" data-id="2">
-      <Card  titulo="Titulo 02" imagen="/relleno.mp4" texto="Hola como estan todos"/>
+      <CardVideo  titulo="Titulo 02" video="/relleno.mp4" texto="Hola como estan todos"/>
     </div>
 
     <div class="slider__body shadow border-2" data-id="3">
-      <Card  titulo="Titulo 03" imagen= "/01.mp4" texto="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda rem esse nostrum ex, eos similique est quae totam vel qui. " />
+      <CardFoto  titulo="Titulo 03" imagen="/serv05.jpg" texto="Una foto para variar este proyecto espero les guste"/>
     </div>
+
+    <div class="slider__body shadow border-2" data-id="4">
+      <CardVideo  titulo="Titulo 04" video= "/01.mp4" texto="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda rem esse nostrum ex, eos similique est quae totam vel qui. " />
+    </div>
+
     <div class="flecha flex items-center">
       <i class="fa-solid fa-arrow-right fa-2xl"></i>
     </div>
