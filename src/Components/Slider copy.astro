@@ -1,7 +1,3 @@
----
-import Card from '../Components/CardSlider.astro';
----
-
 <main class="slider">
   <div class="slider__container container">
     <div class="flecha flex items-center">
@@ -10,15 +6,48 @@ import Card from '../Components/CardSlider.astro';
 
     
     <div class="slider__body slider__body__show shadow border-2" data-id="1">
-      <Card titulo="Titulo 01" imagen="portada.mkv" texto="Lorem, ipsum dolor sit amet Lorem, ipsum dolor sit amet Lorem, ipsum dolor sit amet"/>
+      <div class="slider__picture">
+        <video muted autoplay loop src="/portada.mkv" class="slider__img"
+        ></video>
+      </div>
+      <div class="slider_texto m-3">
+        <h2>Titulo 01</h2>
+        <h3 class="my-2">Subtitulo</h3>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis
+          animi nisi, ipsa explicabo veniam repudiandae odit. Corrupti adipisci
+          rerum repudiandae.
+        </p>
+      </div>
     </div>
 
     <div class="slider__body shadow border-2" data-id="2">
-      <Card  titulo="Titulo 02" imagen="/relleno.mp4" texto="Hola como estan todos"/>
+      <div class="slider__picture">
+        <video muted autoplay loop src="/relleno.mp4" class="slider__img"
+        ></video>
+      </div>
+      <div class="slider_texto m-3">
+        <h2>Titulo 02</h2>
+        <h3 class="my-2">Subtitulo</h3>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi autem
+          architecto quae ab. Aliquid delectus distinctio blanditiis, similique
+          aliquam illo corrupti sapiente.
+        </p>
+      </div>
     </div>
 
     <div class="slider__body shadow border-2" data-id="3">
-      <Card  titulo="Titulo 03" imagen= "/01.mp4" texto="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda rem esse nostrum ex, eos similique est quae totam vel qui. " />
+      <div class="slider__picture">
+        <video muted autoplay loop src="/01.mp4" class="slider__img"></video>
+      </div>
+      <div class="slider__texto m-3">
+        <h2>Titulo 03</h2>
+        <h3 class="my-2">Subtitulo</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque nihil
+        </p>
+      </div>
     </div>
     <div class="flecha flex items-center">
       <i class="fa-solid fa-arrow-right fa-2xl"></i>
@@ -42,7 +71,7 @@ import Card from '../Components/CardSlider.astro';
     display: grid;
     grid-template-columns: 50px 1fr 50px;
     /* align-items: center; */
-    /* gap: 0 1rem; */
+    gap: 0 1rem;
   }
 
   .slider__body {
