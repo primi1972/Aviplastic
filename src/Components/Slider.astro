@@ -1,6 +1,7 @@
 ---
 import CardVideo from '../Components/CardSliderVideo.astro';
 import CardFoto from '../Components/CardSliderFoto.astro';
+import Slider from '../js/slider.js';
 ---
 
 <main class="slider">
@@ -93,7 +94,7 @@ import CardFoto from '../Components/CardSliderFoto.astro';
 
   function changePosition(change) {
     const currentElement = Number(
-      document.querySelector(".slider__body__show").dataset.id
+    document.querySelector(".slider__body__show").dataset.id
     );
     value = currentElement;
     value += change;
