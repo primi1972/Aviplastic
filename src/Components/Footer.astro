@@ -42,10 +42,18 @@ const date = new Date().getFullYear();
         <h5 class="white-text">Redes Sociales</h5>
         <hr class="border-2 my-2 w-1/2" />
         <ul  class="flex items-center gap-2 justify-center h-full my-5">
-          <li><a href="https://www.facebook.com/Abiplastic.costales/" class="fa-brands fa-facebook fa-2xl" target="_blank"></a></li>
-          <li><i class="fa-brands fa-instagram fa-2xl"></i></li>
-          <li><i class="fa-brands fa-twitter fa-2xl"></i></li>
-          <li><i class="fa-brands fa-youtube fa-2xl"></i></li>
+          <li>
+            <a href="https://www.facebook.com/Abiplastic.costales/" class="fa-brands fa-facebook fa-2xl redes" target="facebook abiplastic"></a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/Abiplastic.costales/" class="fa-brands fa-instagram fa-2xl redes"></a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/Abiplastic.costales/" class="fa-brands fa-twitter fa-2xl redes"></a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/Abiplastic.costales/" class="fa-brands fa-youtube fa-2xl redes"></a>
+          </li>
         </ul>
       </div>      
     </div>
@@ -62,4 +70,34 @@ const date = new Date().getFullYear();
   i {
     padding-right: 0.5rem;
   }
+
+  .redes{
+    position:relative;
+    border-radius: 40px;
+    color:#fff;
+    text-decoration: none;
+    user-select: none;
+    transition: 500ms;
+  }
+
+  .redes:hover{
+    transform: scale(1.2);
+  }
+
+  li:nth-child(1) .redes:hover{
+    color: #1877F2;
+  }
+
+  li:nth-child(2) .redes:hover{
+    color: #E4405F;
+  }
+
+  li:nth-child(3) .redes:hover{
+    color: #1DA1F2;
+  }
+
+  li:nth-child(4) .redes:hover{
+    color: #CD201F;
+  }
+
 </style>
