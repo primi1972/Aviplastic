@@ -1,36 +1,44 @@
 ---
 import CardVideo from '../Components/CardSliderVideo.astro';
 import CardFoto from '../Components/CardSliderFoto.astro';
-import Slider from '../js/slider.js';
+
 ---
 
 <main class="slider">
   <div class="slider__container container">
 
     <div class="flecha flex items-center">
-      <i class="fa-solid fa-arrow-left fa-2xl"></i>
+      <i class="fa-solid fa-arrow-left flecha-left fa-2xl"></i>
     </div>
 
-    
     <div class="slider__body slider__body__show shadow border-2" data-id="1">
-      <CardVideo titulo="Titulo 01" video="/portada.mp4" texto="Lorem, ipsum dolor sit amet Lorem, ipsum dolor sit amet Lorem, ipsum dolor sit amet"/>
+      <CardFoto titulo="Flete" imagen="/serv01.jpg" texto="Tenemos la capacidad de transportar el producto a cualquier parte de la republica."/>
     </div>
 
     <div class="slider__body shadow border-2" data-id="2">
-      <CardVideo  titulo="Titulo 02" video="/relleno.mp4" texto="Hola como estan todos"/>
+      <CardFoto  titulo="Flete" imagen="/serv02.jpg" texto="Tenemos la capacidad de transportar el producto a cualquier parte de la republica."/>
     </div>
 
     <div class="slider__body shadow border-2" data-id="3">
-      <CardFoto  titulo="Titulo 03" imagen="/serv05.jpg" texto="Una foto para variar este proyecto espero les guste"/>
+      <CardFoto  titulo="Titulo 03" imagen="/serv03.jpg" texto="Una foto para variar este proyecto espero les guste"/>
     </div>
 
     <div class="slider__body shadow border-2" data-id="4">
-      <CardVideo  titulo="Titulo 04" video= "/01.mp4" texto="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda rem esse nostrum ex, eos similique est quae totam vel qui. " />
+      <CardFoto  titulo="Impresión" imagen= "/serv04.jpg" texto="Impresion de 1 hasta 4 tintas si requieres informacion contactanos." />
+    </div>
+
+    <div class="slider__body shadow border-2" data-id="5">
+      <CardFoto  titulo="Impresión" imagen="/serv05.jpg" texto="Impresion de 1 hasta 4 tintas si requieres informacion contactanos."/>
+    </div>
+    
+    <div class="slider__body shadow border-2" data-id="6">
+      <CardFoto  titulo="Impresión" imagen="/serv06.jpg" texto="Impresion de 1 hasta 4 tintas si requieres informacion contactanos."/>
     </div>
 
     <div class="flecha flex items-center">
-      <i class="fa-solid fa-arrow-right fa-2xl"></i>
+      <i class="fa-solid fa-arrow-right flecha-right fa-2xl"></i>
     </div>
+
   </div>
 </main>
 
@@ -85,8 +93,8 @@ import Slider from '../js/slider.js';
 
 <script>
   const sliders = [...document.querySelectorAll(".slider__body")];
-  const arrowLeft = document.querySelector(".fa-arrow-left");
-  const arrowRight = document.querySelector(".fa-arrow-right");
+  const arrowLeft = document.querySelector(".flecha-left");
+  const arrowRight = document.querySelector(".flecha-right");
   let value;
 
   arrowRight.addEventListener("click", () => changePosition(1));
@@ -96,6 +104,7 @@ import Slider from '../js/slider.js';
     const currentElement = Number(
     document.querySelector(".slider__body__show").dataset.id
     );
+    console.log(currentElement);
     value = currentElement;
     value += change;
 

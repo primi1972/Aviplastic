@@ -1,0 +1,109 @@
+---
+import CardVideo from '../Components/CardSliderVideo.astro';
+import CardFoto from '../Components/CardSliderFoto.astro';
+
+---
+
+<main class="slider">
+  <div class="slider__container container">
+
+    <div class="flecha flex items-center">
+      <i class="fa-solid fa-arrow-left flecha-left1 fa-2xl"></i>
+    </div>
+
+    <div class="slider__body1 slider__body__show1 shadow border-2" data-id="1">
+      <CardVideo titulo="Titulo 01" video="/portada.mp4" texto="Lorem, ipsum dolor sit amet Lorem, ipsum dolor sit amet Lorem, ipsum dolor sit amet"/>
+    </div>
+
+    <div class="slider__body1 shadow border-2" data-id="2">
+      <CardVideo  titulo="Titulo 02" video="/relleno.mp4" texto="Hola como estan todos"/>
+    </div>
+
+    <div class="slider__body1 shadow border-2" data-id="3">
+      <CardFoto  titulo="Titulo 03" imagen="/serv05.jpg" texto="Una foto para variar este proyecto espero les guste"/>
+    </div>
+
+    <div class="slider__body1 shadow border-2" data-id="4">
+      <CardVideo  titulo="Titulo 04" video= "/01.mp4" texto="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda rem esse nostrum ex, eos similique est quae totam vel qui. " />
+    </div>
+
+    <div class="flecha flex items-center">
+      <i class="fa-solid fa-arrow-right flecha-right1 fa-2xl"></i>
+    </div>
+
+  </div>
+</main>
+
+<style>
+  .container {
+    width: 350px;
+    overflow: hidden;
+  }
+
+  .slider {
+    margin: 0 auto;
+    height: auto;
+  }
+
+  .slider__container {
+    background-color: #f2f2f2;
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    /* align-items: center; */
+    /* gap: 0 1rem; */
+  }
+
+  .slider__body1 {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    opacity: 0;
+    pointer-events: none;
+    display: grid;
+    background-color: #f2f2f2;
+    grid-template-rows: max-content 1fr;
+    margin: 1rem 0;
+    transition: 1.5s;
+  }
+
+  .slider__body__show1 {
+    opacity: 1;
+    pointer-events: unset;
+  }
+  .slider__img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin: 0 auto;
+  }
+
+  .fa-solid {
+    cursor: pointer;
+    width: 90%;
+    text-align: center;
+  }
+</style>
+
+<script>
+  const sliders = [...document.querySelectorAll(".slider__body1")];
+  const arrowLeft = document.querySelector(".flecha-left1");
+  const arrowRight = document.querySelector(".flecha-right1");
+  let value1;
+
+  arrowRight.addEventListener("click", () => changePosition(1));
+  arrowLeft.addEventListener("click", () => changePosition(-1));
+
+  function changePosition(change1) {
+    const currentElement1 = Number(
+    document.querySelector(".slider__body__show1").dataset.id
+    );
+    console.log(currentElement1);
+    value1 = currentElement1;
+    value1 += change1;
+
+    if (value1 === 0 || value1 == sliders.length + 1) {
+      value1 = value1 === 0 ? sliders.length : 1;
+    }
+    sliders[currentElement1 - 1].classList.toggle("slider__body__show1");
+    sliders[value1 - 1].classList.toggle("slider__body__show1");
+  }
+</script>
