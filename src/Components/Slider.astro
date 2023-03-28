@@ -1,11 +1,8 @@
 ---
-import CardVideo from '../Components/CardSliderVideo.astro';
 import CardFoto from '../Components/CardSliderFoto.astro';
-
 ---
 
-<main class="slider">
-  <div class="slider__container container">
+  <div class="slider__container container1">
 
     <div class="flecha flex items-center">
       <i class="fa-solid fa-arrow-left flecha-left fa-2xl"></i>
@@ -46,27 +43,19 @@ import CardFoto from '../Components/CardSliderFoto.astro';
     <div class="flecha flex items-center">
       <i class="fa-solid fa-arrow-right flecha-right fa-2xl"></i>
     </div>
-
   </div>
-</main>
+
 
 <style>
-  .container {
+  .container1 {
     width: 350px;
     overflow: hidden;
-  }
-
-  .slider {
-    margin: 0 auto;
-    height: auto;
   }
 
   .slider__container {
     background-color: #f2f2f2;
     display: grid;
     grid-template-columns: 50px 1fr 50px;
-    /* align-items: center; */
-    /* gap: 0 1rem; */
   }
 
   .slider__body {

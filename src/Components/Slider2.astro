@@ -1,0 +1,94 @@
+---
+import CardVideo from '../Components/CardSliderVideo.astro';
+import CardFoto from '../Components/CardSliderFoto.astro';
+
+---
+
+  <div class="slider__container container1">
+    <div class="flecha flex items-center">
+      <i class="fa-solid fa-arrow-left flecha-left2 fa-2xl"></i>
+    </div>
+    <div class="slider__body2 slider__body__show2 shadow border-2" data-id="1">
+      <CardFoto  titulo="Impresión" imagen= "/serv04.jpg" texto="Impresion de 1 hasta 4 tintas si requieres informacion contactanos." />
+    </div>
+
+    <div class="slider__body2 shadow border-2" data-id="2">
+      <CardFoto  titulo="Impresión" imagen="/serv05.jpg" texto="Impresion de 1 hasta 4 tintas si requieres informacion contactanos."/>
+    </div>
+    
+    <div class="slider__body2 shadow border-2" data-id="3">
+      <CardFoto  titulo="Impresión" imagen="/serv06.jpg" texto="Impresion de 1 hasta 4 tintas si requieres informacion contactanos."/>
+    </div>
+    <div class="flecha flex items-center">
+      <i class="fa-solid fa-arrow-right flecha-right2 fa-2xl"></i>
+    </div>
+  </div>
+
+<style>
+  .container1 {
+    width: 350px;
+    overflow: hidden;
+  }
+
+  .slider__container {
+    background-color: #f2f2f2;
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    /* align-items: center; */
+    /* gap: 0 1rem; */
+  }
+
+  .slider__body2 {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    opacity: 0;
+    pointer-events: none;
+    display: grid;
+    background-color: #f2f2f2;
+    grid-template-rows: max-content 1fr;
+    margin: 1rem 0;
+    transition: 1.5s;
+  }
+
+  .slider__body__show2 {
+    opacity: 1;
+    pointer-events: unset;
+  }
+  .slider__img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin: 0 auto;
+  }
+
+  .fa-solid {
+    cursor: pointer;
+    width: 90%;
+    text-align: center;
+  }
+</style>
+
+<script>
+  const sliders = [...document.querySelectorAll(".slider__body2")];
+  const arrowLeft = document.querySelector(".flecha-left2");
+  const arrowRight = document.querySelector(".flecha-right2");
+  let value2;
+
+  arrowRight.addEventListener("click", () => changePosition(1));
+  arrowLeft.addEventListener("click", () => changePosition(-1));
+
+  function changePosition(change2) {
+    const currentElement2 = Number(
+    document.querySelector(".slider__body__show2").dataset.id
+    );
+    console.log(currentElement2);
+    value2 = currentElement2;
+    value2 += change2;
+
+    if (value2 === 0 || value2 == sliders.length + 1) {
+      value2 = value2 === 0 ? sliders.length : 1;
+    }
+    sliders[currentElement2 - 1].classList.toggle("slider__body__show2");
+    sliders[value2 - 1].classList.toggle("slider__body__show2");
+  }
+</script>
