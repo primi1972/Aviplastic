@@ -1,0 +1,88 @@
+---
+import Layout from "../Layouts/Layout.astro";
+import 'animate.css';
+---
+
+<Layout title="Contacto">
+  <h1 class="titulo">Contacto</h1>
+  <div class="flex flex-wrap m-6 gap-6 justify-center">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1331.2760754540132!2d-98.84763309384037!3d19.307660443445723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2smx!4v1678513263895!5m2!1ses-419!2smx"
+      height="450"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      class="w-11/12 md:w-5/12 shadow-md animate__animated animate__fadeIn"></iframe>
+
+    <div class="w-11/12 lg:w-5/12 flex justify-center items-center shadow-md p-6 animate__animated animate__fadeIn">
+      <form id="form_contacto" method="post" action="enviar.php" class="w-full">
+        <div class="input-field">
+          <i class="material-icons prefix text-blue-400">mail</i>
+          <input
+            type="email"
+            name="email"
+            class="form-control"
+            placeholder="Correo"
+            id="floatingInput"
+            required
+          />
+          <label for="floatingInput"></label>
+        </div>
+        <div class="input-field col s6">
+          <i class="material-icons prefix text-blue-400">person</i>
+          <input
+            type="text"
+            name="nombre"
+            class="form-control"
+            placeholder="Enter nombre"
+            id="floatingInput"
+            required
+          />
+          <label for="floatingInput"></label>
+        </div>
+        <div class="input-field col s6">
+          <i class="material-icons prefix text-blue-400">location_on</i>
+          <input
+            type="text"
+            name="direccion"
+            class="form-control"
+            placeholder="Enter direccion"
+            id="floatingInput"
+          />
+          <label for="floatingInput"> </label>
+        </div>
+        <div class="input-field col s6">
+          <i class="material-icons prefix text-blue-400">phone</i>
+          <input
+            type="tel"
+            name="tel"
+            class=""
+            placeholder="Enter telefono"
+            id="floatingInput"
+          />
+          <label for="floatingInput"></label>
+        </div>
+        <div class="input-field flex flex-col">
+          <i class="material-icons prefix text-blue-400">comment</i>
+          <textarea
+            name="comentarios"
+            rows="3"
+            placeholder="Escriba su inquietud."
+            class="materialize-textarea"></textarea>
+          <label for="floatingInput"></label>
+        </div>
+        <button type="submit" class="waves-effect waves-light btn bg-blue-400">
+          Enviar
+        </button>
+      </form>
+    </div>
+  </div>
+</Layout>
+
+<style>
+    .animate__animated.animate__fadeIn {
+  --animate-duration: 2s;
+  --animate-delay: 0.9s;
+}
+</style>

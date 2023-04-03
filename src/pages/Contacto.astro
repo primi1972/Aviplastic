@@ -1,11 +1,39 @@
 ---
 import Layout from "../Layouts/Layout.astro";
-import 'animate.css';
+import "animate.css";
+import AddContacto from "../Components/AddContacto.astro";
 ---
 
 <Layout title="Contacto">
   <h1 class="titulo">Contacto</h1>
-  <div class="flex flex-wrap m-6 gap-6 justify-center">
+  <div class="grid grid-cols-1 grid-row-5 md:grid-cols-2 md:grid-row-4 lg:grid-cols-4 lg:grid-row-2 lg:max-w-screen-lg md:max-w-screen-md sm:max-w-screen-sm gap-6 mx-auto my-6">
+
+    <div class="col-start-1 col-end-2 row-start-1 row-end-2
+    md:col-start-1 md:col-end-3 md:row-start-1 md:row-end-2
+    lg:col-start-1 lg:col-end-3 lg:row-start-1 lg:row-end-2">
+      <AddContacto
+        imagen="map"
+        titulo="Dirección"
+        texto="av prol. emiliano zapata mz 22 lt 11"
+      />
+    </div>
+
+    <div class="col-start-1 col-end-2 row-start-2 row-end-3 md:col-start-1 md:col-end-2 md:row-start-2 md:row-end-3 lg:col-start-3 lg:col-end-4 lg:row-start-1 lg:row-end-2">
+      <AddContacto
+        imagen="mail"
+        titulo="Correos"
+        texto="contacto@abiplastic.com.mx"
+      />
+    </div>
+
+    <div class="col-start-1 col-end-2 row-start-3 row-end-4 md:col-start-2 md:col-end-3 md:row-start-2 md:row-end-3 lg:col-start-4 lg:col-end-5 lg:row-start-1 lg:row-end-2">
+      <AddContacto
+        imagen="call"
+        titulo="Telefonos"
+        texto="56 2077 5115, 55 6963 2556"
+      />
+    </div>
+
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1331.2760754540132!2d-98.84763309384037!3d19.307660443445723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2smx!4v1678513263895!5m2!1ses-419!2smx"
       height="450"
@@ -13,12 +41,14 @@ import 'animate.css';
       allowfullscreen=""
       loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"
-      class="w-11/12 md:w-5/12 shadow-md animate__animated animate__fadeIn"></iframe>
+      class="col-start-1 col-end-2 row-start-4 row-end-5 
+      md:col-start-1 md:col-end-3 md:row-start-3 md:row-end-4 lg:col-start-1 lg:col-end-3 lg:row-start-2 lg:row-end-3 w-full sombra"></iframe>
 
-    <div class="w-11/12 lg:w-5/12 flex justify-center items-center shadow-md p-6 animate__animated animate__fadeIn">
-      <form id="form_contacto" method="post" action="enviar.php" class="w-full">
+    <div class="col-start-1 col-end-2 row-start-5 row-end-6 
+    md:col-start-1 md:col-end-3 md:row-start-4 md:row-end-5  lg:col-start-3 lg:col-end-5 lg:row-start-2 lg:row-end-3 w-full sombra">
+      <form id="form_contacto" method="post" action="enviar.php" class="m-6">
         <div class="input-field">
-          <i class="material-icons prefix text-blue-400">mail</i>
+          <i class="material-symbols-outlined prefix text-blue-400">mail</i>
           <input
             type="email"
             name="email"
@@ -30,7 +60,7 @@ import 'animate.css';
           <label for="floatingInput"></label>
         </div>
         <div class="input-field col s6">
-          <i class="material-icons prefix text-blue-400">person</i>
+          <i class="material-symbols-outlined prefix text-blue-400">person</i>
           <input
             type="text"
             name="nombre"
@@ -42,7 +72,9 @@ import 'animate.css';
           <label for="floatingInput"></label>
         </div>
         <div class="input-field col s6">
-          <i class="material-icons prefix text-blue-400">location_on</i>
+          <i class="material-symbols-outlined prefix text-blue-400"
+            >location_on</i
+          >
           <input
             type="text"
             name="direccion"
@@ -53,7 +85,7 @@ import 'animate.css';
           <label for="floatingInput"> </label>
         </div>
         <div class="input-field col s6">
-          <i class="material-icons prefix text-blue-400">phone</i>
+          <i class="material-symbols-outlined prefix text-blue-400">phone</i>
           <input
             type="tel"
             name="tel"
@@ -64,7 +96,7 @@ import 'animate.css';
           <label for="floatingInput"></label>
         </div>
         <div class="input-field flex flex-col">
-          <i class="material-icons prefix text-blue-400">comment</i>
+          <i class="material-symbols-outlined prefix text-blue-400">comment</i>
           <textarea
             name="comentarios"
             rows="3"
@@ -81,8 +113,8 @@ import 'animate.css';
 </Layout>
 
 <style>
-    .animate__animated.animate__fadeIn {
-  --animate-duration: 2s;
-  --animate-delay: 0.9s;
-}
+  .animate__animated.animate__fadeIn {
+    --animate-duration: 2s;
+    --animate-delay: 0.9s;
+  }
 </style>
