@@ -1,0 +1,97 @@
+---
+import Button from '/';
+const {imagen, titulo = 'Hola', texto = "texto", boton="#"} = Astro.props;
+---
+
+<div class="card sombra">
+  <div class="imagen">
+    <img src={imagen} alt="">
+  </div>
+  <div class="contenido">
+    <div class="titulo">{titulo}</div>
+    <div class="texto">{texto}</div>
+    
+    <div class="cortina"></div>
+  </div>
+</div>
+
+<style>
+  .card {
+    width: 350px;
+    height: min-content;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+      rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+      position: relative;
+      /* background: #fff; */
+  }
+
+  img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    margin: 0 auto;
+  }
+
+  .contenido{
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 10px 30px;
+    background: transparent;
+    transition: 1s;
+    z-index: 1;
+}
+
+.contenido:after{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0%;
+  background: var(--secundary-color);
+  transition: 1s;
+  z-index: -1;
+}
+
+.card:hover .contenido:after{
+  height: 100%;
+}
+
+  .titulo{
+    font-size: 30px;
+    font-weight: 600;
+    margin: 20px 0;
+    text-transform: capitalize;
+    transition: 500ms ease-in-out;
+    
+  }
+
+  .card:hover .titulo{
+    color: #fff;
+  }
+
+  .texto{
+    font-size: 16px;
+    font-weight: 400;
+    text-align: justify;
+  }
+
+  .boton{
+    width: 24px;
+    height: 24px;
+    margin: 20px 0;
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    background: var(--primary-color);
+    position: relative;
+    text-decoration: none;
+    border-radius: 24px;
+    transition: 500ms ease-in-out;
+  }
+
+</style>

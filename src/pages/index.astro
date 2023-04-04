@@ -2,6 +2,7 @@
 import Layout from "../Layouts/Layout.astro";
 import Enlace from "../Components/Enlaces";
 import Footer from '../Components/Footer.astro';
+import Card1 from "../Components/Card7.astro";
 ---
 
 <Layout title="Inicio">
@@ -20,7 +21,7 @@ import Footer from '../Components/Footer.astro';
       >
     </a>
 
-    <div class="contenido" id="contenido">
+    <div class="contenido w-full" id="contenido">
       <div class="enlaces flex m-auto justify-center gap-10 flex-wrap my-6">
         <Enlace
           color="text-blue-500"
@@ -39,43 +40,12 @@ import Footer from '../Components/Footer.astro';
           client:visible
         />
       </div>
-
-      <p class="m-8">
-        Hola ipsum dolor sit amet consectetur, adipisicing elit. Debitis,
-        maiores sint quisquam assumenda, tempore vitae laboriosam eligendi
-        inventore illo illum impedit. Corporis alias modi facilis harum
-        cupiditate, praesentium, iure atque animi maxime commodi sapiente
-        veniam. Sint sit, et accusantium nobis corporis perspiciatis quasi
-        suscipit autem necessitatibus velit! Aspernatur qui, recusandae illo
-        dolor maiores deserunt eum. Quia, neque maxime exercitationem nobis
-        quibusdam voluptates ipsam in veritatis expedita molestiae possimus modi
-        blanditiis cupiditate minus est eum. Porro doloribus incidunt sint dicta
-        laboriosam repudiandae, dolorem, totam magnam, ea nemo aliquid
-        laudantium nihil minima officiis labore pariatur facilis tenetur.
-        Ratione, modi! Explicabo, officia. Quam labore fugiat obcaecati
-        exercitationem aspernatur facilis rerum aut nihil quia est nesciunt
-        atque impedit nostrum, enim commodi sint dolor accusamus et vero dolores
-        quis, magni vitae! Quia ea laborum dicta officiis facilis dolorum
-        reiciendis quibusdam laudantium, voluptates deleniti vitae neque ratione
-        repellat nisi minima doloremque omnis optio odit architecto temporibus
-        ab? Porro eligendi quos numquam odio? Eum ducimus est dolores
-        necessitatibus eos quisquam vitae nihil aliquid unde quae voluptate
-        facilis iste accusantium molestias minus, illo qui corporis ab
-        laudantium reiciendis aperiam? Totam reiciendis nostrum atque eaque
-        repellat commodi est laudantium culpa non. Temporibus fugiat laboriosam
-        quo at quam laborum deleniti tenetur? Provident magni ea error natus
-        dolores dicta ipsum amet? Placeat temporibus nesciunt nulla facilis
-        praesentium deserunt facere sequi, dolores sint eos corrupti in. Neque
-        laudantium molestias quod non repellendus facere esse blanditiis labore
-        exercitationem amet, aspernatur rem dolore, illum illo ratione sint.
-        Facere ut qui velit alias sapiente iste odit id inventore corrupti,
-        asperiores voluptatibus dolores repudiandae molestias laudantium vero
-        commodi. Quam mollitia architecto delectus laudantium et adipisci
-        eveniet, suscipit, iste autem rem soluta rerum aliquam molestiae,
-        nostrum consequuntur corrupti unde pariatur doloremque ut qui. Nostrum
-        vitae rerum unde, consectetur distinctio fugit! Aliquid deserunt velit
-        numquam ipsum iusto cumque.
-      </p>
+      <div class="flex justify-center gap-6 flex-wrap">
+        <Card1 imagen='/rubro01.jpg' titulo= 'Agricultura.' texto='Los sacos a granel son beneficiosos cuando se trata de almacenar y transportar materiales agrícolas. Los agricultores pueden usarlos para realizar muchas de sus tareas y actividades diarias a un ritmo más eficiente; y su tamaño, forma, configuración, versatilidad y durabilidad son beneficiosos para la industria.'/>
+        <Card1 imagen='/rubro02.jpg' titulo= 'Industria Quimica.' texto='Los sacos a granel son beneficiosos cuando se trata de almacenar y transportar materiales agrícolas. Los agricultores pueden usarlos para realizar muchas de sus tareas y actividades diarias a un ritmo más eficiente; y su tamaño, forma, configuración, versatilidad y durabilidad son beneficiosos para la industria.'/>
+        <Card1 imagen='/serv01.jpg' titulo= 'Fertilizantes.' texto='Los sacos a granel son beneficiosos cuando se trata de almacenar y transportar materiales agrícolas. Los agricultores pueden usarlos para realizar muchas de sus tareas y actividades diarias a un ritmo más eficiente; y su tamaño, forma, configuración, versatilidad y durabilidad son beneficiosos para la industria.'/>
+        <Card1 imagen='/serv01.jpg' titulo= 'Arena y escombros.' texto='Los sacos a granel son beneficiosos cuando se trata de almacenar y transportar materiales agrícolas. Los agricultores pueden usarlos para realizar muchas de sus tareas y actividades diarias a un ritmo más eficiente; y su tamaño, forma, configuración, versatilidad y durabilidad son beneficiosos para la industria.'/>        
+      </div>
       <Footer/>
     </div>
   </main>

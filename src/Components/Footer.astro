@@ -8,8 +8,9 @@ const date = new Date().getFullYear();
       <div class="min-w-[350px] flex flex-col items-center lg:items-start">
         <h2>Contacto</h2>
         <hr class="border-2 my-2 w-1/2" />
-        <p><i class="fas fa-phone-alt"></i>Nextel 55 3542 2781</p>
-        <p><i class="fas fa-phone-alt"></i>Oficina 55 3542 2781</p>
+        <p><i class="fas fa-phone-alt"></i>Oficinas 55 3689 9300</p>
+        <p><i class="fas fa-phone-alt"></i>Cel 55 6963 2556</p>
+        <p><i class="fas fa-phone-alt"></i>Cel 55 4295 1484</p>
         <p><i class="fas fa-envelope"></i>contacto@abiplastic.com.mx</p>
         <p><i class="fas fa-envelope"></i>abiplastic@gmail.com</p>
       </div>
@@ -24,18 +25,7 @@ const date = new Date().getFullYear();
         <p>Sabado:</p>
         <p>8:00 a 13:00</p>
       </div>
-      <!-- <div
-        class="links min-w-[350px] flex flex-col items-center lg:items-start"
-      >
-        <h5 class="white-text">Links</h5>
-        <hr class="border-2 my-2 w-1/2" />
-        <ul>
-          <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-          <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-          <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-          <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-        </ul>
-      </div> -->
+
       <div
         class="links min-w-[350px] flex flex-col items-center"
       >
@@ -72,10 +62,11 @@ const date = new Date().getFullYear();
   }
 
   .redes{
-    color:#fff;
+    color: var(--secundary-color);
     text-decoration: none;
     user-select: none;
     transition: 500ms;
+    text-shadow: 0px 0px 2px black;
   }
 
   .redes:hover{
@@ -96,6 +87,10 @@ const date = new Date().getFullYear();
 
   li:nth-child(4) .redes:hover{
     color: #CD201F;
+  }
+
+  hr{
+    border-color:var(--secundary-color);
   }
 
 </style>

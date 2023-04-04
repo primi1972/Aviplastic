@@ -3,15 +3,19 @@ import Layout from "../Layouts/Layout.astro";
 import Slider from "../Components/Slider.astro";
 import Slider1 from "../Components/Slider1.astro";
 import Slider2 from "../Components/Slider2.astro";
-
 ---
 
 <Layout title="Servicios">
   <h1 class="titulo">Servicios</h1>
   <div class="flex justify-center flex-wrap gap-4 my-6">
-    <Slider/>
-    <Slider2/>
-    <Slider1/>
-    
+    <div data-aos="flip-left">
+      <Slider />
+    </div>
+    <div data-aos="flip-left"  data-aos-delay="400">
+      <Slider2 />
+    </div>
+    <div data-aos="flip-left"  data-aos-delay="800">
+      <Slider1 />
+    </div>
   </div>
 </Layout>

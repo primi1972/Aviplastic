@@ -20,18 +20,30 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>Abiplastic - {title}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerPolicy="no-referrer" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
   <body>
     <Navbar/>
     <slot />
     <Footer/>
+
+    <script  is:inline src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script is:inline>
+      AOS.init();
+    </script>
   </body>
 </html>
 
 <style is:global>
+:root{
+  --primary-color: #60a5fa;
+  --secundary-color:#feb900;
+  --border-secundary-color:rgba(254, 186, 0, 0.16);
+}
 
 
   *{
@@ -59,7 +71,6 @@ h3{
   font-size: 1.5rem;
   font-weight: 300;
   line-height: 1.75rem;
-  color: #60a5fa;
 }
 
 .titulo{
@@ -67,11 +78,15 @@ h3{
   line-height: 1rem;
   text-align: center;
   margin: 2rem 0;
-  color: #60a5fa;
+  color: var(--primary-color);
 }
 
 .sombra{
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.sombra1{
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, var(--secundary-color) 0px 0px 0px 1px;
 }
 
 </style>

@@ -1,9 +1,8 @@
 ---
-import 'animate.css';
-const {imagen, texto = "texto", producto = 'Costal'} = Astro.props;
+const {imagen=[1, 2, 3, 4], texto = "texto", producto = 'Costal', medidas = [1,2,3,4,5]} = Astro.props;
 ---
 
-<div class="w-[300px] animate__animated animate__bounceIn shadow rounded-sm border-2">
+<div class="w-[300px] sombra1">
   <div class="card-image relative">
     <img src={imagen} />
     <div class="absolute top-2 left-2 opacity-30">
@@ -11,29 +10,25 @@ const {imagen, texto = "texto", producto = 'Costal'} = Astro.props;
     </div>
   </div>
   <div class="card-content">
-    <p class="text-center">{texto}</p>
     <table class="striped centered">
       <thead class="text-xl">
         <tr>
             <th>{producto}</th>
         </tr>
+        <tr>
+          <td  class="text-center">{texto}</td>
+        </tr>
       </thead>
 
       <tbody class="tracking-widest">
-        <tr>
-          <td>30x50</td> 
-        </tr>
-        <tr>
-          <td>70x80</td>  
-        </tr>
-        <tr>
-          <td>70x90</td>   
-        </tr>
+        {medidas.map((medida) => <tr><td>{medida}</td></tr>)}        
       </tbody>
     </table>
   </div>
 </div>
 
 <style>
-
+ thead tr td{
+  color: var(--secundary-color);
+ }
 </style>
