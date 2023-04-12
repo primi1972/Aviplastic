@@ -39,12 +39,16 @@ const { title } = Astro.props;
 </html>
 
 <style is:global>
+
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+
 :root{
   --primary-color: #60a5fa;
+  --primary-color-1: #3992ff;
   --secundary-color:#feb900;
   --border-secundary-color:rgba(254, 186, 0, 0.16);
+  --background-color1: #d6d6d6;
 }
-
 
   *{
     padding: 0;
@@ -73,11 +77,11 @@ h3{
   line-height: 1.75rem;
 }
 
-.titulo{
+.seccion{
   font-size: 3rem;
   line-height: 1rem;
   text-align: center;
-  margin: 2rem 0;
+  padding: 2rem 0;
   color: var(--primary-color);
 }
 
@@ -88,5 +92,50 @@ h3{
 .sombra1{
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, var(--secundary-color) 0px 0px 0px 1px;
 }
+
+.boton{
+    width: max-content;
+    padding: 7px 15px;
+    font-size: 14px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: .10em;
+    border-radius: 2px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: 500ms;
+  }
+
+  .boton:hover{
+    background: var(--primary-color-1);
+    box-shadow: rgba(0, 0, 0, 0.35) 5px 5px 20px;
+  }
+
+  .bigboton{
+    width: max-content;
+    padding: 7px 15px;
+    font-size: 24px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    background: var(--secundary-color);
+    border: 2px solid var(--secundary-color);
+    color: #000;
+    text-decoration: none;
+    text-transform: capitalize;
+    letter-spacing: .05em;
+    border-radius: 2px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: 500ms;
+  }
+
+  .bigboton:hover{
+    background: transparent;
+    box-shadow: rgba(0, 0, 0, 0.35) 5px 5px 20px;
+  }
 
 </style>

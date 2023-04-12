@@ -1,23 +1,90 @@
 ---
 import Layout from "../Layouts/Layout.astro";
-
 ---
 
 <Layout title="Nosotros">
-  <div class="container px-6">
-    <h1 class="titulo">Nosotros</h1>
-    <p>
-      Somos una empresa mexicana joven que se dedica a la distribución de sacos
-      de polipropileno en la cual uno de nuestros objetivos es ayudar al medio
-      ambiente. <br /><br /> ¿Cómo lo lograremos?. <br /><br /> Fomentando el uso y reúso de los
-      costales ya que están hechos de polipropileno 100% virgen lo que nos ayuda
-      a reducir el impacto causado al medio ambiente ya que se considera un plástico
-      ecológico. <br /><br /> Otro de nuestros objetivos fundamentales es satisfacer las
-      necesidades de nuestros clientes al buscar productos confiables que cubran
-      sus expectativas. <br /><br /> Los costales de polipropileno están hechos con el
-      más alto nivel de calidad. <br /><br /> Nuestro compromiso es actuar con honestidad
-      y respeto para lograr satisfacer las necesidades de nuestros clientes.
-    </p>
-    
+  <div class="container1 bg-[var(--background-color1)]">
+    <h1 class="seccion">Nosotros</h1>
+
+    <div class="nosotros">
+      <div class="max-w-7xl m-auto py-6">
+      <h2 class="text-3xl lg:text-4xl text-center">
+        Somos una empresa mexicana de tercera generación, por lo cual tenemos el
+        conocimiento y la experiencia en el ramo de la fabricación y
+        distribución de sacos de polipropileno.
+      </h2>
+      <div class="punto flex items-center" data-aos="zoom-in" data-aos-delay="200">
+        <span class="material-symbols-outlined h-min bg-[var(--secundary-color)] text-white "> done</span><p>
+          Contamos con al capacidad de entrega de 1 costal hasta la cantidades
+          industriales, con el mejor servicio y atención.
+        </p>
+      </div>
+      <div class="punto flex items-center" data-aos="zoom-in" data-aos-delay="300">
+        <span class="material-symbols-outlined h-min bg-[var(--secundary-color)] text-white "> done</span><p>
+          Los costales de polipropileno están hechos con el más alto nivel de
+          calidad.
+        </p>
+      </div>
+      <div class="punto flex items-center" data-aos="zoom-in" data-aos-delay="400">
+        <span class="material-symbols-outlined h-min bg-[var(--secundary-color)] text-white"> done</span><p>
+          Satisfacemos las necesidades de nuestros clientes al buscar productos
+          confiables que cubran sus expectativas.
+        </p>
+      </div>
+      <div class="punto flex items-center" data-aos="zoom-in" data-aos-delay="500">
+        <span class="material-symbols-outlined h-min bg-[var(--secundary-color)] text-white "> done</span><p>
+          Manejamos con mucha responsabilidad tu imagen en cada costal impreso.
+        </p>
+      </div>
+      <div class="punto flex items-center" data-aos="zoom-in" data-aos-delay="600">
+        <span class="material-symbols-outlined h-min bg-[var(--secundary-color)] text-white "> done</span><p>
+          Todos nuestros clientes se consideran importantes para nosotros,
+          tienen la confianza de que sus pedidos se entregaran en tiempo y forma
+          como se nos solicito.
+        </p>
+      </div>
+      <div class="punto flex items-center" data-aos="zoom-in" data-aos-delay="700">
+        <span class="material-symbols-outlined h-min bg-[var(--secundary-color)] text-white "> done</span><p>
+          Nuestro compromiso es actuar con honestidad y respeto.
+        </p>
+      </div>
+      <div class="punto flex items-center" data-aos="zoom-in" data-aos-delay="800">
+        <span class="material-symbols-outlined h-min bg-[var(--secundary-color)] text-white "> done</span><p>
+          Fomentamos el uso de costales fabricados de polipropileno reciclado,
+          lo que nos ayuda a reducir el impacto causado al medio ambiente ya que
+          se considera un plástico ecológico.
+        </p>
+      </div>
+    </div>
+    </div>
   </div>
 </Layout>
+
+<style>
+  .nosotros {
+    padding: 0 30px;
+  }
+
+  h2 {
+    margin: 30px 0;
+    line-height: 2.5rem;
+  }
+
+  /* p{
+    text-shadow: 1px 1px 2px rgba(81, 67, 21, 0.8),
+      4px 4px 10px rgba(81, 67, 21, 0.8);
+  } */
+
+  span {
+    margin-right: 30px;
+    padding: 5px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    text-shadow: 1px 1px 2px rgba(81, 67, 21, 0.8),
+      4px 4px 10px rgba(81, 67, 21, 0.8);
+  }
+
+  p {
+    margin: 20px 0;
+  }
+</style>

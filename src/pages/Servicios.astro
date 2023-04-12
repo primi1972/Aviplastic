@@ -6,15 +6,15 @@ import Slider2 from "../Components/Slider2.astro";
 ---
 
 <Layout title="Servicios">
-  <h1 class="titulo">Servicios</h1>
+  <h1 class="seccion">Servicios</h1>
   <div class="flex justify-center flex-wrap gap-4 my-6">
-    <div data-aos="flip-left">
+    <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
       <Slider />
     </div>
-    <div data-aos="flip-left"  data-aos-delay="400">
+    <div data-aos="flip-right"  data-aos-delay="400" data-aos-duration="2000">
       <Slider2 />
     </div>
-    <div data-aos="flip-left"  data-aos-delay="800">
+    <div data-aos="flip-left"  data-aos-delay="800" data-aos-duration="2000">
       <Slider1 />
     </div>
   </div>

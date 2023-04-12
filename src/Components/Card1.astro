@@ -1,8 +1,83 @@
-<div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
+---
+const {imagen, titulo = 'Hola', texto = "texto", texto_boton = "Boton", enlace="#"} = Astro.props;
+---
+
+<div class="card1 sombra1">
+  <div class="imagen">
+    <img src={imagen} alt="imagen rubro abiplastic">
   </div>
+  <div class="contenido bg-[var(--secundary-color)] after:h-[150%] lg:bg-transparent lg:after:h-0">
+    <div class="titulo text-white lg:text-[var(--primary-color)]">{titulo}</div>
+    <div class="texto">{texto}</div>
+  </div>
+  <div class="button1"><a href={enlace} class="boton">{texto_boton}</a></div>
+</div>
+
+<style>
+  .card1 {
+    width: 350px;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    margin: 0 auto;
+  }
+
+  .contenido{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 10px 30px;
+    transition: 1s;
+    z-index: 1;
+    margin-bottom: 50px;
+}
+
+.contenido:after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: var(--secundary-color);
+  transition: 1s;
+  z-index: -1;
+}
+
+.card1:hover .contenido:after{
+  height: 150%;
+}
+
+  .titulo{
+    font-size: 30px;
+    font-weight: 600;
+    margin: 20px 0;
+    text-transform: capitalize;
+    transition: 500ms ease-in-out;
+    
+  }
+
+  .card1:hover .titulo{
+    color: #fff;
+  }
+
+  .texto{
+    font-size: 16px;
+    font-weight: 400;
+    
+  }
+
+  .button1{
+    position: absolute;
+    bottom: 10px;
+    left: 30px;
+    z-index: 1;
+  }
+
+</style>
