@@ -1,6 +1,9 @@
 ---
 import Layout from "../Layouts/Layout.astro";
-import Card from "../Components/Card2.astro";
+import CardN from "../Components/CardBlanco.astro";
+import CardE from "../Components/CardEcologico.astro";
+import CardC from "../Components/CardContenedor.astro";
+import CardVideoT from "../Components/Card2Video.astro";
 ---
 
 <Layout title="Productos">
@@ -8,35 +11,33 @@ import Card from "../Components/Card2.astro";
 
   <div class="grupo flex flex-wrap gap-5 justify-center my-6">
     <div data-aos="zoom-in" data-aos-delay="200">
-      <Card
+      <CardN
         producto="Costal Blanco"
-        imagen={["/saconuevo.jpg"]}
         texto="Con/sin impresión hasta 4 tintas"
         medidas={["60x100", "57x100", "54x100", "50x90", "50x80", "36x48"]}
       />
     </div>
 
     <div data-aos="zoom-in" data-aos-delay="300">
-      <Card
+      <CardVideoT
         producto="Costal Trasparente"
-        imagen="/sacousado.jpg"
+        video="/costal_transparente.mp4"
         texto="De primera y Segunda"
         medidas={["60x100", "57x100", "54x100", "50x90"]}
       />
     </div>
     <div data-aos="zoom-in" data-aos-delay="400">
-      <Card
+      <CardE
         producto="Ecologico"
-        imagen="/arpilla.jpg"
         texto="Manejamos todas las medidas"
         medidas={["54x100", "50x90", "50x80"]}
       />
     </div>
 
     <div data-aos="zoom-in" data-aos-delay="500">
-      <Card
+      <CardC
         producto="Super Saco Nuevo"
-        imagen="/contendor.webp"
+        imagenes={["/saconuevo.jpg"]}
         texto="Manejamos todas las medidas"
         medidas={["60x60x120", "90x90x180", "Super Saco Laminado"]}
       />

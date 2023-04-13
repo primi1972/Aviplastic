@@ -1,0 +1,54 @@
+---
+const {video, texto = "texto", producto = 'Costal', medidas = [1,2,3,4,5]} = Astro.props;
+---
+
+<div class="w-[350px] sombra1 h-full">
+  <div class="relative h-[350px]">
+    <video muted autoplay loop src={video} class="slider__img"></video>
+    <div class="absolute top-2 left-2 opacity-30">
+      <img src="/logo.svg" alt="">  
+    </div>
+  </div>
+  <div class="card-content">
+    <table class="striped centered">
+      <thead class="text-xl">
+        <tr>
+            <th>{producto}</th>
+        </tr>
+        <tr>
+          <td  class="text-center">{texto}</td>
+        </tr>
+      </thead>
+
+      <tbody class="tracking-widest">
+        {medidas.map((medida) => <tr><td>{medida}</td></tr>)}        
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<style>
+
+  video{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+thead tr th{
+  text-transform:uppercase;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+ thead tr td{
+  text-transform: capitalize;
+  color: var(--secundary-color);
+  padding-top: 0;
+ }
+
+ tbody{
+  font-size: 1.25rem;
+  font-weight: 200;
+ }
+</style>
